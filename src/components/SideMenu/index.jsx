@@ -9,7 +9,7 @@ import {
   FolderOutlined 
 } from "@ant-design/icons";
 
-import { get } from '../../ajax'
+import { get } from '../../api'
 import './index.less'
 
 const { Sider } = Layout;

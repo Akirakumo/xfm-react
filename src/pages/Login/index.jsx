@@ -1,7 +1,8 @@
 import React, { useEffect, useState, useCallback } from "react"
+import { useNavigate } from "react-router-dom";
 import { Form, Input, Button, message } from "antd"
 import { UserOutlined, LockOutlined } from "@ant-design/icons"
-import { get } from "../../ajax";
+import { get } from "../../api";
 import "./index.less";
 
 const key = "login";
@@ -9,6 +10,8 @@ const key = "login";
 export default function Login(props) {
 
   const [logining, setLogining] = useState(false)
+
+  const navigate = useNavigate()
 
   const onFinish = useCallback( values => {
       // 改变状态 禁用登录按钮
@@ -26,7 +29,8 @@ export default function Login(props) {
         localStorage.setItem('isLogin', 'true')
 
         // 跳转
-        props.history.push('/home');
+        // props.history.push('/home');
+        navigator('/home')
         
       }, 
       err => {
@@ -48,7 +52,7 @@ export default function Login(props) {
 
     const isLogin = localStorage.getItem('isLogin')
 
-    if( isLogin === 'true' ) props.history.push('/home')
+    if( isLogin === 'true' ) navigate('/home')
 
   }, [])
 

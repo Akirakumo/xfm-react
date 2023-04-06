@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import { List, Image, Breadcrumb } from "antd";
-import { get, path } from "../../ajax";
+import { get, path } from "../../api";
 import MusicItem from "../MusicItem";
 import "./index.less";
 

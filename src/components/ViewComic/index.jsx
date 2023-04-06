@@ -8,7 +8,7 @@ import { connect } from 'react-redux'
 // import { AppContext } from '../../context'
 
 import ListCardItem from '../ListCardItem'
-import { get } from '../../ajax'
+import { get } from '../../api'
 
 import './index.less'
 

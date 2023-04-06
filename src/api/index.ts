@@ -1,8 +1,12 @@
-import axios from "axios";
+import axios from 'axios'
 
-export const path = "http://127.0.0.1:8081";
+interface Params {
+  [propName: string]: any
+}
 
-export const get = (url, params) => {
+export const path: string = 'http://localhost:8081'
+
+export const get = (url: string, params: Params) => {
   return new Promise((resolve, reject) => {
     axios
       .get(`${path}${url}`, { params })

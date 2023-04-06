@@ -6,7 +6,7 @@ import { SettingOutlined } from '@ant-design/icons';
 import EChartLine from '../EChartLine';
 // import G2Line from '../G2Line';
 import ViewSetting from '../ViewSetting'
-import { get, path } from "../../ajax";
+import { get, path } from "../../api";
 
 import './index.less'
 
